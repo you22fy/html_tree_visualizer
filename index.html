@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML DOM ツリー可視化</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h2>HTML DOM ツリー可視化ツール</h2>
+    <textarea
+      id="htmlInput"
+      placeholder="ここにHTMLを入力してください"
+    ></textarea>
+    <button onclick="updateTree()">ツリーを更新</button>
+
+    <div class="container">
+      <!-- 左側: ツリー表示 -->
+      <div class="left-panel">
+        <svg id="treeViz"></svg>
+      </div>
+
+      <!-- 右側: HTMLのレンダリング -->
+      <div class="right-panel">
+        <iframe id="renderedFrame"></iframe>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
